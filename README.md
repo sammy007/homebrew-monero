@@ -14,6 +14,8 @@ Enter in your terminal:
 brew tap monero-project/monero
 ```
 
+NOTE: As of now, there is a monero formula in a brew core. To prioritize this tap, run `brew tap-pin sammy007/monero` before installation.
+
 ### Install latest stable release
 
 ```
