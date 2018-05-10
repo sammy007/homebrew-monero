@@ -1,0 +1,31 @@
+diff --git a/contrib/epee/include/net/abstract_tcp_server2.inl b/contrib/epee/include/net/abstract_tcp_server2.inl
+index 195ee2f0..52b4c85b 100644
+--- a/contrib/epee/include/net/abstract_tcp_server2.inl
++++ b/contrib/epee/include/net/abstract_tcp_server2.inl
+@@ -41,7 +41,8 @@
+ #include <boost/utility/value_init.hpp>
+ #include <boost/asio/deadline_timer.hpp>
+ #include <boost/date_time/posix_time/posix_time.hpp> // TODO
+-#include <boost/thread/v2/thread.hpp> // TODO
++#include <boost/thread/thread.hpp> // TODO
++#include <boost/thread/condition_variable.hpp> // TODO
+ #include "misc_language.h"
+ #include "pragma_comp_defs.h"
+
+diff --git a/contrib/epee/include/syncobj.h b/contrib/epee/include/syncobj.h
+index 8912fc01..9f240485 100644
+--- a/contrib/epee/include/syncobj.h
++++ b/contrib/epee/include/syncobj.h
+@@ -31,10 +31,11 @@
+ #define __WINH_OBJ_H__
+
+ #include <boost/chrono/duration.hpp>
++#include <boost/thread/condition_variable.hpp>
+ #include <boost/thread/locks.hpp>
+ #include <boost/thread/mutex.hpp>
+ #include <boost/thread/recursive_mutex.hpp>
+-#include <boost/thread/v2/thread.hpp>
++#include <boost/thread/thread.hpp>
+
+ namespace epee
+ {
